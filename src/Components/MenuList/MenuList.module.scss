@@ -1,0 +1,86 @@
+@import "../../variables.scss";
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  // gap: 10px;
+  padding: 5px;
+  margin-top: 10px;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+    // gap: 20px;
+  }
+}
+
+.item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 0;
+    margin-left: 0;
+    width: fit-content;
+  }
+}
+
+.activeLink {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  // justify-content: center;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: none;
+  color: $primary-text-color;
+  padding: 10px 5px;
+  border-bottom: 2px solid red;
+
+  & > svg {
+    fill: $secondary-text-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    // justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.link {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  // justify-content: center;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-decoration: none;
+  color: $primary-text-color;
+  padding: 10px 5px;
+  border-radius: 10px;
+  transition: box-shadow 450ms ease-in-out;
+
+  &:hover {
+    box-shadow: 2px 2px 2px 2px (rgba($color: $primary-text-color, $alpha: 0.1));
+  }
+
+  & > svg {
+    fill: $secondary-text-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+}

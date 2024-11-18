@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 24px;
+  color: $secondary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+  }
+}
+
+.name {
+  font-weight: 900;
+  color: rgb(5, 5, 72);
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}

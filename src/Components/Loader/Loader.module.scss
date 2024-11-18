@@ -1,0 +1,65 @@
+@import "../../variables.scss";
+
+.backdrop {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.7);
+  filter: blur(5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border-radius: 50%;
+
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  width: 84px;
+  height: 84px;
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background-color: $accent-color;
+  animation: push 1s infinite linear alternate;
+}
+.loader:after {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  animation-direction: alternate-reverse;
+}
+@keyframes push {
+  0% {
+    width: 14px;
+    height: 14px;
+  }
+  100% {
+    width: 84px;
+    height: 84px;
+  }
+}
