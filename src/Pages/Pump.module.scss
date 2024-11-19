@@ -25,12 +25,6 @@
   line-height: 1.5;
   margin-left: auto;
   margin-right: auto;
-
-  & > svg {
-    display: block;
-    width: 24px;
-    height: 24px;
-  }
 }
 
 .name {
@@ -40,6 +34,12 @@
   font-size: 18px;
   font-weight: 700;
   color: $secondary-text-color;
+
+  & > svg {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .highlight {
@@ -48,10 +48,18 @@
 }
 
 .img {
+  width: 100%;
+  height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  @media screen and (min-width: $tablet) {
+    width: 80%;
+  }
 }
 
 .head {
@@ -70,4 +78,29 @@
   font-size: 16px;
   line-height: 1.5;
   color: $primary-text-color;
+}
+
+.btn {
+  width: fit-content;
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 15px;
+  color: #fff;
+  background-color: rgb(10, 97, 219);
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
 }

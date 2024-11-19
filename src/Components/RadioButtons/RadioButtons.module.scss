@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 18px;
+  // font-weight: 900;
+  color: $primary-text-color;
+}
+
+.field {
+  display: none;
+}
+
+.field:checked + .name {
+  background-color: red;
+  //   border-color: darkred;
+}

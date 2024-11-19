@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { ReactComponent as Bot } from "../../icons/bot.svg";
 import css from "./MenuList.module.scss";
 
@@ -10,12 +11,32 @@ const options = [
 ];
 
 export const MenuList = () => {
+  const handleScroll = () => {
+    if (window.scrollY < 50) {
+      window.scrollBy({
+        top: 250, // Adjust the value as per your needs
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Navigate to the first option on initial load if not already on a valid route
+  useEffect(() => {
+    if (location.pathname === "/") {
+      navigate(options[0].route);
+    }
+  }, [location.pathname, navigate]);
+
   return (
     <ul className={css.list}>
-      {options?.map((item) => (
-        <li className={css.item}>
+      {options?.map((item, index) => (
+        <li className={css.item} key={index}>
           <NavLink
             to={item.route}
+            onClick={handleScroll}
             className={({ isActive }) =>
               isActive ? `${css.activeLink}` : `${css.link}`
             }

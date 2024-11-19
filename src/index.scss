@@ -17,9 +17,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $bg-color;
@@ -34,4 +32,8 @@ ul {
   list-style: none; /* Removes the dots */
   padding: 0; /* Optional: Removes the default padding */
   margin: 0; /* Optional: Removes the default margin */
+}
+
+btn {
+  cursor: pointer;
 }

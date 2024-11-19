@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { ReactComponent as Bot } from "../icons/pump.svg";
 import signalImage from "../icons/pumpsignal.jpg";
 import css from "./Pump.module.scss";
@@ -16,7 +17,10 @@ const Pump = () => {
         (от 1 до 30 минут), за который цена актива должна измениться, а также
         задать <span className={css.highlight}>процент изменения цены</span> за
         этот период. Настройки для роста цены (пампа) и снижения цены (дампа)
-        можно указать отдельно.
+        можно указать отдельно.{" "}
+        <span className={css.highlight}>
+          Сигналы приходят на основе данных для фьючерсов (бессрочных USDT).
+        </span>
       </p>
       <h3 className={css.name}>Как понимать сигналы бота?</h3>
       <p className={css.head}>Каждый сигнал содержит 5 строчек:</p>
@@ -67,6 +71,9 @@ const Pump = () => {
         </li>
         <li className={css.item}>3. Ожидать сигналы бота.</li>
       </ul>
+      {/* <NavLink to={"/payment/pump"} className={css.btn}>
+        Оплатить подписку на скринер пампа цены
+      </NavLink> */}
     </div>
   );
 };
