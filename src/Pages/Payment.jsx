@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 import { RadioButtons } from "../Components/RadioButtons/RadioButtons";
 import { Dropdown } from "../Components/Dropdown/Dropdown";
+import { Loader } from "../Components/Loader/Loader";
 import css from "./Payment.module.scss";
 
 const list = [
@@ -13,6 +15,10 @@ const list = [
 
 const monthes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
+const axiosInstance = axios.create({
+  baseURL: "https://your-api-url.com", // Replace with your API base URL
+});
+
 const Payment = () => {
   const { userId, screener } = useParams();
 
@@ -20,6 +26,17 @@ const Payment = () => {
   const [selectedMonth, setSelectedMonth] = useState("1");
   const [sum, setSum] = useState(3);
   const [discount, setDiscount] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchUserData = async () => {
+    try {
+      const response = await axiosInstance.get(`/user/${userId}`);
+      setUserData(response.data);
+      setIsLoading(false); 
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+    }
+  };
 
   useEffect(() => {
     if (selectedValue.length > 0) {

@@ -1,5 +1,5 @@
 import { SharedLayout } from "../SharedLayout/SharedLayout";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Pump from "../../Pages/Pump";
 import OpenInterest from "../../Pages/OpenInterest";
 import OrderBook from "../../Pages/OrderBook";
