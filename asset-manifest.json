@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/bots-front/static/css/main.1db0df15.css",
+    "main.js": "/bots-front/static/js/main.b003485e.js",
+    "static/media/hero.jpg": "/bots-front/static/media/hero.0f6d358a96dd826bc381.jpg",
+    "static/media/pumpsignal.jpg": "/bots-front/static/media/pumpsignal.6b93d2770e359bc6de62.jpg",
+    "static/media/openinterest.png": "/bots-front/static/media/openinterest.b83f3b215d3855be4221.png",
+    "static/media/volumes.png": "/bots-front/static/media/volumes.cf98ef16370870ccfa4c.png",
+    "static/media/orderbook.png": "/bots-front/static/media/orderbook.5bf02d053fc750067c40.png",
+    "static/media/orderbook.svg": "/bots-front/static/media/orderbook.ef367cb2506ef68ca1f5d3ff2095ab7f.svg",
+    "static/media/openInterest.svg": "/bots-front/static/media/openInterest.2600e2295cacf84a60e71c1f47c185e0.svg",
+    "static/media/volumes.svg": "/bots-front/static/media/volumes.baac6b323362a0b459052e5baa332bf9.svg",
+    "static/media/pump.svg": "/bots-front/static/media/pump.ae98fdef6e44e0cc9b9bea007d708a9e.svg",
+    "static/media/bot.svg": "/bots-front/static/media/bot.3cb3c33a5435dfb74cfffea3290ffce0.svg",
+    "index.html": "/bots-front/index.html",
+    "static/media/arrow.svg": "/bots-front/static/media/arrow.fd058aa634755cfd5d7d7230e3b325fb.svg",
+    "main.1db0df15.css.map": "/bots-front/static/css/main.1db0df15.css.map",
+    "main.b003485e.js.map": "/bots-front/static/js/main.b003485e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1db0df15.css",
+    "static/js/main.b003485e.js"
+  ]
+}
