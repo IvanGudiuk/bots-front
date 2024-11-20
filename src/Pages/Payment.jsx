@@ -8,7 +8,7 @@ import css from "./Payment.module.scss";
 
 const list = [
   { text: "Скринер пампа цены", value: "pump" },
-  { text: "Скринер открытого интереса", value: "openinterest" },
+  { text: "Скринер открытого интереса", value: "openInterest" },
   { text: "Скринер плотностей", value: "orderbook" },
   { text: "Скринер повышенных объёмов", value: "volumes" },
 ];
@@ -16,7 +16,7 @@ const list = [
 const monthes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
 const axiosInstance = axios.create({
-  baseURL: "https://your-api-url.com", // Replace with your API base URL
+  baseURL: "https://bots-back.onrender.com", // Replace with your API base URL
 });
 
 const Payment = () => {
@@ -24,59 +24,99 @@ const Payment = () => {
 
   const [selectedValue, setSelectedValue] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState("1");
-  const [sum, setSum] = useState(3);
+  const [sum, setSum] = useState(2);
   const [discount, setDiscount] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [userData, setUserData] = useState([]);
+  const [link, setLink] = useState("");
 
   const fetchUserData = async () => {
     try {
-      const response = await axiosInstance.get(`/user/${userId}`);
-      setUserData(response.data);
-      setIsLoading(false); 
+      const response = await axiosInstance.get(`/users/${userId}`);
+      const { bots } = response.data;
+      setUserData(bots);
+      setIsLoading(false);
     } catch (error) {
       console.error("Error fetching user data:", error);
     }
   };
 
-  useEffect(() => {
-    if (selectedValue.length > 0) {
-      // Базовая цена за одного бота на 1 месяц
-      const basePrice = 3;
-
-      let discount = 0;
-
-      if (selectedMonth >= 3 && selectedMonth < 6) {
-        discount = 1;
-      } else if (selectedMonth >= 6 && selectedMonth < 9) {
-        discount = 2;
-      } else if (selectedMonth >= 9 && selectedMonth < 12) {
-        discount = 3;
+  const paymentHandler = async () => {
+    try {
+      const body = { userId, monthes: selectedMonth, bots: selectedValue };
+      const response = await axiosInstance.post(`/users/payment`, body);
+      if (response && response?.data?.link) {
+        setLink(response.data.link);
       }
-
-      discount = selectedValue.length === 3 ? discount + 1 : discount;
-      discount = selectedValue.length === 4 ? discount + 2 : discount;
-
-      const initialSum =
-        basePrice * Number(selectedMonth) * selectedValue.length;
-      // Рассчитываем новую сумму
-      const newSum = initialSum - discount;
-
-      setSum(newSum);
-      setDiscount(discount);
+    } catch (error) {
+      console.log(error.message);
     }
+  };
+
+  useEffect(() => {
+    if (userId) {
+      fetchUserData();
+    }
+  }, [userId]);
+
+  useEffect(() => {
+    if (link) {
+      window.location.href = link;
+      setLink("");
+    }
+  }, [link]);
+
+  useEffect(() => {
+    if (screener) {
+      setSelectedValue([...selectedValue, screener]);
+    }
+  }, [screener, setSelectedValue]);
+
+  useEffect(() => {
+    // if (selectedValue.length > 0) {
+    // Базовая цена за одного бота на 1 месяц
+    const basePrice = 2;
+
+    // let discount = 0;
+
+    // if (selectedMonth >= 3 && selectedMonth < 6) {
+    //   discount = 1;
+    // } else if (selectedMonth >= 6 && selectedMonth < 9) {
+    //   discount = 2;
+    // } else if (selectedMonth >= 9 && selectedMonth < 12) {
+    //   discount = 3;
+    // }
+
+    // discount = selectedValue.length === 3 ? discount + 1 : discount;
+    // discount = selectedValue.length === 4 ? discount + 2 : discount;
+
+    const initialSum = basePrice * Number(selectedMonth) * selectedValue.length;
+    // Рассчитываем новую сумму
+    const newSum = initialSum - discount;
+
+    setSum(newSum);
+    setDiscount(discount);
+    // }
   }, [selectedMonth, selectedValue]);
 
-  return (
+  return isLoading ? (
+    <Loader />
+  ) : (
     <div className={css.wrapper}>
       <p className={css.head}>Оплата подписки:</p>
+      <span className={css.info}>
+        * здесь указаны только те боты, которыми вы уже пользовались
+      </span>
       <p className={css.title}>
-        Выбирите ботов, на которые хотите подписаться:
+        Выбирите ботов, на которые хотите оплатить подписку:
       </p>
-      <RadioButtons
-        options={list}
-        onChange={setSelectedValue}
-        initialValue={screener}
-      />
+      {userData.length > 0 && (
+        <RadioButtons
+          options={list.filter((item) => userData.includes(item.value))}
+          onChange={setSelectedValue}
+          initialValue={screener}
+        />
+      )}
       <p className={css.title}>Период:</p>
       <Dropdown options={monthes} onChange={setSelectedMonth} />
       <div>
@@ -84,11 +124,13 @@ const Payment = () => {
         <span className={css.sum}>{sum}</span>{" "}
         <span className={css.currency}>usdt</span>
         <span className={css.commision}>* + коммисия сети</span>
-        <span className={css.discount}>{`СКИДКА: ${discount} usdt`}</span>
+        {/* <span className={css.discount}>{`СКИДКА: ${discount} usdt`}</span> */}
       </div>
       <button
+        disabled={sum === 0}
         type="button"
         className={css.btn}
+        onClick={paymentHandler}
       >{`Оплатить ${sum} usdt`}</button>
     </div>
   );

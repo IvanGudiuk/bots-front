@@ -5,6 +5,8 @@ import OpenInterest from "../../Pages/OpenInterest";
 import OrderBook from "../../Pages/OrderBook";
 import Volumes from "../../Pages/Volumes";
 import Payment from "../../Pages/Payment";
+import Success from "../../Pages/Success";
+import Error from "../../Pages/Error";
 
 export const App = () => {
   return (
@@ -16,6 +18,8 @@ export const App = () => {
         {<Route path="/volumes" element={<Volumes />} />}
       </Route>
       {<Route path="/payment/:userId/:screener" element={<Payment />} />}
+      {<Route path="/payment/success" element={<Success />} />}
+      {<Route path="/payment/error" element={<Error />} />}
     </Routes>
   );
 };

@@ -27,6 +27,11 @@
   text-transform: uppercase;
 }
 
+.info {
+  font-size: 14px;
+  color: red;
+}
+
 .title {
   width: 100%;
   text-align: center;
@@ -56,13 +61,13 @@
   display: inline-block;
   font-size: 16px;
   text-transform: uppercase;
-  color: red;
+  color: #fff;
 }
 
 .commision {
   display: block;
   font-size: 16px;
-  color: #fff;
+  color: red;
   margin-top: 20px;
 }
 
@@ -91,5 +96,9 @@
 
   &:hover {
     transform: scale(1.02);
+  }
+
+  &:disabled {
+    background-color: rgb(124, 132, 244);
   }
 }
