@@ -17,8 +17,6 @@ export const App = () => {
       <Route path="/payment/success" element={<Success />} />
       <Route path="/payment/error" element={<Error />} />
 
-      <Route path="*" element={<NotFound />} />
-
       {/* Nested routes under SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
         <Route path="pump" element={<Pump />} />
@@ -26,6 +24,9 @@ export const App = () => {
         <Route path="orderbook" element={<OrderBook />} />
         <Route path="volumes" element={<Volumes />} />
       </Route>
+
+      {/* Catch-all 404 route */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
