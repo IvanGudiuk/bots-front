@@ -8,7 +8,7 @@ const Volumes = lazy(() => import("../../Pages/Volumes"));
 const Payment = lazy(() => import("../../Pages/Payment"));
 const Success = lazy(() => import("../../Pages/Success"));
 const Error = lazy(() => import("../../Pages/Error"));
-const NotFound = lazy(() => import("../../Pages/NotFound"));
+// const NotFound = lazy(() => import("../../Pages/NotFound"));
 
 export const App = () => {
   return (
@@ -23,7 +23,7 @@ export const App = () => {
           <Route path="/payment/success" element={<Success />} />
           <Route path="/payment/error" element={<Error />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
   );
