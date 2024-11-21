@@ -13,7 +13,7 @@ export const App = () => {
   return (
     <Routes>
       {/* Standalone routes */}
-      <Route path="payment/:userId/:screener" element={<Payment />} />
+      <Route path="/payment/:userId/:screener" element={<Payment />} />
       <Route path="payment/success" element={<Success />} />
       <Route path="payment/error" element={<Error />} />
 
