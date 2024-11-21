@@ -11,15 +11,21 @@ import Error from "../../Pages/Error";
 export const App = () => {
   return (
     <Routes>
+      {/* Nested routes under SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
-        {<Route path="/pump" element={<Pump />} />}
-        {<Route path="/openinterest" element={<OpenInterest />} />}
-        {<Route path="/orderbook" element={<OrderBook />} />}
-        {<Route path="/volumes" element={<Volumes />} />}
+        <Route path="pump" element={<Pump />} />
+        <Route path="openinterest" element={<OpenInterest />} />
+        <Route path="orderbook" element={<OrderBook />} />
+        <Route path="volumes" element={<Volumes />} />
       </Route>
-      {<Route path="/payment/:userId/:screener" element={<Payment />} />}
-      {<Route path="/payment/success" element={<Success />} />}
-      {<Route path="/payment/error" element={<Error />} />}
+
+      {/* Standalone routes */}
+      <Route path="/payment/:userId/:screener" element={<Payment />} />
+      <Route path="/payment/success" element={<Success />} />
+      <Route path="/payment/error" element={<Error />} />
+
+      {/* Catch-all route for 404 */}
+      <Route path="*" element={<div>404 Page Not Found</div>} />
     </Routes>
   );
 };
