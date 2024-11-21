@@ -14,15 +14,16 @@ export const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route path="/payment/success" element={<Success />} />
+        <Route path="/payment/error" element={<Error />} />
+        <Route path="/payment/:userId/:screener" element={<Payment />} />
+        {/* <Route path="/" element={<SharedLayout />}>
           <Route path="pump" element={<Pump />} />
           <Route path="openinterest" element={<OpenInterest />} />
           <Route path="orderbook" element={<OrderBook />} />
           <Route path="volumes" element={<Volumes />} />
-          <Route path="/payment/success" element={<Success />} />
-          <Route path="/payment/error" element={<Error />} />
-          <Route path="/payment/:userId/:screener" element={<Payment />} />
-        </Route>
+         
+        </Route> */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
