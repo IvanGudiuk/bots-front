@@ -16,9 +16,11 @@ const SharedLayout = () => {
         <img src={heroImage} className={css.hero} alt="hero" />
       </div>
       <MenuList />
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
+      <div>
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
+      </div>
     </div>
   );
 };
