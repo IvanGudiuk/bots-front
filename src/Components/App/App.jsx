@@ -8,12 +8,11 @@ import Payment from "../../Pages/Payment";
 import Success from "../../Pages/Success";
 import Error from "../../Pages/Error";
 import NotFound from "../../Pages/NotFound";
-import Home from "../../Pages/Home";
 
 export const App = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
+      <Route index element={<Pump />} />
       <Route path="/payment/:userId/:screener" element={<Payment />} />
       <Route path="/payment/success" element={<Success />} />
       <Route path="/payment/error" element={<Error />} />
