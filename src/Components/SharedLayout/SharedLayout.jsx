@@ -17,9 +17,9 @@ const SharedLayout = () => {
       </div>
       <MenuList />
       <div>
-        {/* <Suspense fallback={<Loader />}> */}
-        <Outlet />
-        {/* </Suspense> */}
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </div>
     </div>
   );
