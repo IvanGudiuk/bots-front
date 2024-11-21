@@ -14,9 +14,9 @@ export const App = () => {
   return (
     <Routes>
       <Route index element={<Success />} />
-      {/* <Route path="/payment/success" element={<Success />} />
-        <Route path="/payment/error" element={<Error />} />
-        <Route path="/payment/:userId/:screener" element={<Payment />} /> */}
+      {/* <Route path="/payment/success" element={<Success />} /> */}
+      <Route path="/payment/error" element={<Error />} />
+      <Route path="/payment/:userId/:screener" element={<Payment />} />
       {/* <Route path="/" element={<SharedLayout />}>
           <Route path="pump" element={<Pump />} />
           <Route path="openinterest" element={<OpenInterest />} />
