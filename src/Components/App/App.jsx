@@ -12,15 +12,24 @@ import NotFound from "../../Pages/NotFound";
 export const App = () => {
   return (
     <Routes>
+      {/* Standalone routes */}
+      <Route path="/payment/:userId/:screener" element={<Payment />} />
+      <Route path="/payment/success" element={<Success />} />
+      <Route path="/payment/error" element={<Error />} />
+
+      {/* Nested routes under SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
+        {/* Default index route */}
+        <Route index element={<Pump />} />
+
+        {/* Other child routes */}
         <Route path="pump" element={<Pump />} />
         <Route path="openinterest" element={<OpenInterest />} />
         <Route path="orderbook" element={<OrderBook />} />
         <Route path="volumes" element={<Volumes />} />
       </Route>
-      <Route path="/payment/:userId/:screener" element={<Payment />} />
-      <Route path="/payment/success" element={<Success />} />
-      <Route path="/payment/error" element={<Error />} />
+
+      {/* Catch-all 404 route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
