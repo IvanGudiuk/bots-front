@@ -5,7 +5,7 @@ import { Loader } from "../Loader/Loader";
 import heroImage from "../../icons/hero.jpg";
 import css from "./SharedLayout.module.scss";
 
-export const SharedLayout = () => {
+const SharedLayout = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
@@ -22,3 +22,5 @@ export const SharedLayout = () => {
     </div>
   );
 };
+
+export default SharedLayout;
