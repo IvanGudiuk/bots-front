@@ -4,7 +4,7 @@ import { ReactComponent as Bot } from "../../icons/bot.svg";
 import css from "./MenuList.module.scss";
 
 const options = [
-  { name: "Скринер пампа цены", route: "/pump" },
+  { name: "Скринер пампа цены", route: "/" },
   { name: "Скринер открытого интереса", route: "/openinterest" },
   { name: "Скринер плотностей", route: "/orderbook" },
   { name: "Скринер повышенных объёмов", route: "/volumes" },
