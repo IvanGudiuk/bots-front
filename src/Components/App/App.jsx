@@ -19,12 +19,11 @@ export const App = () => {
           <Route path="openinterest" element={<OpenInterest />} />
           <Route path="orderbook" element={<OrderBook />} />
           <Route path="volumes" element={<Volumes />} />
-          <Route path="payment/:userId/:screener" element={<Payment />} />
-          <Route path="payment/success" element={<Success />} />
-          <Route path="payment/error" element={<Error />} />
-
-          <Route path="*" element={<NotFound />} />
+          <Route path="/payment/:userId/:screener" element={<Payment />} />
+          <Route path="/payment/success" element={<Success />} />
+          <Route path="/payment/error" element={<Error />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
