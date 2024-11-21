@@ -13,7 +13,7 @@ const Error = lazy(() => import("../../Pages/Error"));
 export const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Success />} />
+      <Route path="/" element={<Payment />} />
       {/* <Route path="/payment/success" element={<Success />} /> */}
       <Route path="payment/error" element={<Error />} />
       <Route path="/payment/:userId/:screener" element={<Payment />} />
