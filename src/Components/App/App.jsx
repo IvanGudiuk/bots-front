@@ -1,13 +1,13 @@
 import { SharedLayout } from "../SharedLayout/SharedLayout";
 import { Route, Routes } from "react-router-dom";
-import Pump from "../../Pages/Pump";
-import OpenInterest from "../../Pages/OpenInterest";
-import OrderBook from "../../Pages/OrderBook";
-import Volumes from "../../Pages/Volumes";
-import Payment from "../../Pages/Payment";
-import Success from "../../Pages/Success";
-import Error from "../../Pages/Error";
-import NotFound from "../../Pages/NotFound";
+const Pump = lazy(() => import("../../Pages/Pump"));
+const OpenInterest = lazy(() => import("../../Pages/OpenInterest"));
+const OrderBook = lazy(() => import("../../Pages/OrderBook"));
+const Volumes = lazy(() => import("../../Pages/Volumes"));
+const Payment = lazy(() => import("../../Pages/Payment"));
+const Success = lazy(() => import("../../Pages/Success"));
+const Error = lazy(() => import("../../Pages/Error"));
+const NotFound = lazy(() => import("../../Pages/NotFound"));
 
 export const App = () => {
   return (
