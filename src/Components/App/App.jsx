@@ -1,4 +1,5 @@
 import { SharedLayout } from "../SharedLayout/SharedLayout";
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 const Pump = lazy(() => import("../../Pages/Pump"));
 const OpenInterest = lazy(() => import("../../Pages/OpenInterest"));
