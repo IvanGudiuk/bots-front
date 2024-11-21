@@ -21,7 +21,7 @@ export const App = () => {
       </Route> */}
       <Route path="/payment/:userId/:screener" element={<Payment />} />
       <Route path="/payment/success" element={<Success />} />
-      <Route path="/payment/error" element={<Error />} />
+      <Route index element={<Error />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
