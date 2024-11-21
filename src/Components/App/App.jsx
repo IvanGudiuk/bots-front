@@ -7,10 +7,18 @@ import Volumes from "../../Pages/Volumes";
 import Payment from "../../Pages/Payment";
 import Success from "../../Pages/Success";
 import Error from "../../Pages/Error";
+import NotFound from "../../Pages/NotFound";
 
 export const App = () => {
   return (
     <Routes>
+      {/* Standalone routes */}
+      <Route path="/payment/:userId/:screener" element={<Payment />} />
+      <Route path="/payment/success" element={<Success />} />
+      <Route path="/payment/error" element={<Error />} />
+
+      <Route path="*" element={<NotFound />} />
+
       {/* Nested routes under SharedLayout */}
       <Route path="/" element={<SharedLayout />}>
         <Route path="pump" element={<Pump />} />
@@ -18,14 +26,6 @@ export const App = () => {
         <Route path="orderbook" element={<OrderBook />} />
         <Route path="volumes" element={<Volumes />} />
       </Route>
-
-      {/* Standalone routes */}
-      <Route path="/payment/:userId/:screener" element={<Payment />} />
-      <Route path="/payment/success" element={<Success />} />
-      <Route path="/payment/error" element={<Error />} />
-
-      {/* Catch-all route for 404 */}
-      <Route path="*" element={<div>404 Page Not Found</div>} />
     </Routes>
   );
 };
