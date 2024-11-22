@@ -8,7 +8,7 @@ import css from "./Payment.module.scss";
 
 const list = [
   { text: "Скринер пампа цены", value: "pump" },
-  { text: "Скринер открытого интереса", value: "openInterest" },
+  { text: "Скринер открытого интереса", value: "openinterest" },
   { text: "Скринер плотностей", value: "orderbook" },
   { text: "Скринер повышенных объёмов", value: "volumes" },
 ];
@@ -43,7 +43,7 @@ const Payment = () => {
 
   const paymentHandler = async () => {
     try {
-      const body = { userId, monthes: selectedMonth, bots: selectedValue };
+      const body = { userId, monthes: selectedMonth, bots: selectedValue, sum };
       const response = await axiosInstance.post(`/users/payment`, body);
       if (response && response?.data?.link) {
         setLink(response.data.link);
