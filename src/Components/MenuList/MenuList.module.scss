@@ -27,7 +27,6 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  // justify-content: center;
   font-size: 16px;
   font-weight: 900;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -41,9 +40,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    // justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
   }
 }
 
@@ -53,7 +50,6 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  text-align: left;
   font-size: 16px;
   font-weight: 900;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -72,6 +68,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    text-align: center;
+    justify-content: center;
   }
 }
