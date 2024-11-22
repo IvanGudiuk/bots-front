@@ -53,13 +53,26 @@
   background-color: $secondary-text-color;
   display: flex;
   margin-top: 20px;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
 }
 
-.text {
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #fff;
+}
+
+.link {
+  color: red;
 }
