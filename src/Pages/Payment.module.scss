@@ -54,6 +54,9 @@
 }
 
 .box {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +85,7 @@
 .commision {
   display: block;
   font-size: 14px;
-  text-align: center;
+  margin-right: auto;
   color: red;
   margin-top: 10px;
 }
