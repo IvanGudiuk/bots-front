@@ -134,8 +134,10 @@ const Payment = () => {
       <Dropdown options={monthes} onChange={setSelectedMonth} />
       <div>
         <p className={css.title}>К оплате:</p>
-        <span className={css.sum}>{sum}</span>{" "}
-        <span className={css.currency}>usdt</span>
+        <div className={css.box}>
+          <span className={css.sum}>{sum}</span>{" "}
+          <span className={css.currency}>usdt</span>
+        </div>
         <span className={css.commision}>* + коммисия сети</span>
         {/* <span className={css.discount}>{`СКИДКА: ${discount} usdt`}</span> */}
       </div>
