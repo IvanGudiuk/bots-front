@@ -43,7 +43,14 @@
 }
 
 .link {
-  font-size: 16px;
-  text-decoration: underline;
-  color: rgb(6, 78, 224);
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  & > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: rgb(45, 58, 243);
+  }
 }
