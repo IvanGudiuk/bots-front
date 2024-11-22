@@ -25,18 +25,7 @@ const SharedLayout = () => {
         <p className={css.info}>
           По вопросам работы ботов пишите{" "}
           <a
-            href="https://t.me/@rocket_7777"
-            className={css.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            сюда
-          </a>
-        </p>
-        <p className={css.info}>
-          Создание торговых ботов по вашей стратегии. Пишите{" "}
-          <a
-            href="https://t.me/@rocket_7777"
+            href="https://t.me/+380938632596"
             className={css.link}
             target="_blank"
             rel="noopener noreferrer"
