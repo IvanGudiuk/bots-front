@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { MenuList } from "../MenuList/MenuList";
 import { Loader } from "../Loader/Loader";
+import { ReactComponent as Telegram } from "../../icons/telegram.svg";
 import heroImage from "../../icons/hero.jpg";
 import css from "./SharedLayout.module.scss";
 
@@ -30,7 +31,7 @@ const SharedLayout = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            сюда
+            <Telegram />
           </a>
         </p>
       </footer>
