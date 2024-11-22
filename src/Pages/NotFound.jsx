@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className={css.container}>
       <div className={css.wrapper}>
         <Icon />
-        <span className={css.text}>page not found</span>
+        <span className={css.text}>страница не найдена</span>
       </div>
     </div>
   );
