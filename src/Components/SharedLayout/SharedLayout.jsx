@@ -25,7 +25,7 @@ const SharedLayout = () => {
       <footer className={css.foot}>
         <span className={css.info}>По вопросам работы ботов пишите </span>{" "}
         <a
-          href="https://t.me/@MissValeriia"
+          href="https://t.me/@rocket_77777"
           className={css.link}
           target="_blank"
           rel="noopener noreferrer"
