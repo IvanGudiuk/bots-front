@@ -1,16 +1,15 @@
 @import "../../variables.scss";
 
 .wrapper {
-  position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   // margin-left: auto;
   // margin-right: auto;
   padding: 10px;
-  background-color: red;
 }
 
 .container {
+  position: relative;
   width: 100%;
 }
 
