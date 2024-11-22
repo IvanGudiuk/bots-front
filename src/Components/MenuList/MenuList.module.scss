@@ -25,10 +25,11 @@
 
 .activeLink {
   height: 100%;
-  width: 100%;
+  width: fit-content;
   display: flex;
   gap: 5px;
   align-items: center;
+  margin-right: auto;
   font-size: 16px;
   font-weight: 900;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -43,6 +44,7 @@
 
   @media screen and (min-width: $tablet) {
     justify-content: center;
+    margin-left: auto;
   }
 }
 
