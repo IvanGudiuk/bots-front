@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as Info } from "../../icons/info.svg";
 import css from "./RadioButtons.module.scss";
 
@@ -39,9 +39,9 @@ export const RadioButtons = ({ options, onChange, initialValue }) => {
             />
             <label htmlFor={`checkbox-${index}`} className={css.name}></label>
             <span className={css.title}>{text}</span>
-            <NavLink to={link} className={css.link}>
+            <Link to={link} className={css.link}>
               <Info />
-            </NavLink>
+            </Link>
           </li>
         ))}
       </ul>
