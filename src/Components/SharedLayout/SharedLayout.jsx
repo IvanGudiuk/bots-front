@@ -23,17 +23,15 @@ const SharedLayout = () => {
         </Suspense>
       </div>
       <footer className={css.foot}>
-        <p className={css.info}>
-          По вопросам работы ботов пишите{" "}
-          <a
-            href="https://t.me/+380938632596"
-            className={css.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Telegram />
-          </a>
-        </p>
+        <span className={css.info}>По вопросам работы ботов пишите </span>{" "}
+        <a
+          href="https://t.me/+380938632596"
+          className={css.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Telegram />
+        </a>
       </footer>
     </div>
   );
