@@ -2,7 +2,7 @@
 
 .wrapper {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 2px 2px 2px 2px (rgba($color: $primary-text-color, $alpha: 0.2));
   margin-top: 20px;
   border-radius: 20px;
@@ -10,12 +10,14 @@
 
   @media screen and (min-width: $tablet) {
     width: 80%;
+    padding: 15px;
     margin-left: auto;
     margin-right: auto;
   }
 
   @media screen and (min-width: $desktop) {
     width: 60%;
+    padding: 20px;
   }
 }
 
