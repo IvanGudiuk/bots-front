@@ -6,7 +6,6 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -24,11 +23,13 @@
 }
 
 .head {
-  color: #fff;
+  margin-bottom: 10px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .info {
+  margin-bottom: 10px;
   font-size: 14px;
   text-align: center;
   color: red;
@@ -36,6 +37,7 @@
 
 .title {
   width: 100%;
+  margin-bottom: 10px;
   text-align: center;
   color: #fff;
 }
