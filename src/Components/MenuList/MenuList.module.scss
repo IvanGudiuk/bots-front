@@ -24,6 +24,8 @@
 }
 
 .activeLink {
+  height: 100%;
+  width: 100%;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -32,7 +34,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
   color: $primary-text-color;
-  padding: 10px 5px;
+  padding: 10px;
   border-bottom: 2px solid red;
 
   & > svg {
@@ -55,7 +57,7 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   text-decoration: none;
   color: $primary-text-color;
-  padding: 10px 5px;
+  padding: 10px;
   border-radius: 10px;
   transition: box-shadow 450ms ease-in-out;
 
