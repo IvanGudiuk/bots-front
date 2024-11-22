@@ -48,9 +48,9 @@ const Payment = () => {
   const paymentHandler = async () => {
     try {
       const formData = new FormData();
-      formData.append("userId", JSON.stringify(userId));
-      formData.append("monthes", selectedMonth);
-      formData.append("sum", JSON.stringify(sum));
+      formData.append("userId", userId);
+      formData.append("monthes", Number(selectedMonth));
+      formData.append("sum", sum);
       formData.append("bots", JSON.stringify(selectedValue) || []);
 
       const response = await axiosInstance.post(`/users/payment`, formData, {
