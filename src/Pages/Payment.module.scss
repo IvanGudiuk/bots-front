@@ -25,11 +25,13 @@
 
 .head {
   margin-bottom: 10px;
+  text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
 
 .info {
+  display: block;
   margin-bottom: 10px;
   font-size: 14px;
   text-align: center;
@@ -72,6 +74,7 @@
 .commision {
   display: block;
   font-size: 14px;
+  text-align: center;
   color: red;
   margin-top: 10px;
 }
@@ -86,13 +89,15 @@
 
 .btn {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50%;
   padding: 15px;
   border-radius: 8px;
   border: none;
   font-size: 16px;
   font-weight: 900;
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: rgb(54, 85, 236);
   color: #fff;
   cursor: pointer;
