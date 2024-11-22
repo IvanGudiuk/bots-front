@@ -22,30 +22,28 @@ const SharedLayout = () => {
         </Suspense>
       </div>
       <footer className={css.foot}>
-        <div className={css.contacts}>
-          <p className={css.info}>
-            По вопросам работы ботов пишите{" "}
-            <a
-              href="https://t.me/@rocket_7777"
-              className={css.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              сюда
-            </a>
-          </p>
-          <p className={css.info}>
-            Создание торговых ботов по вашей стратегии. Пишите{" "}
-            <a
-              href="https://t.me/@rocket_7777"
-              className={css.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              сюда
-            </a>
-          </p>
-        </div>
+        <p className={css.info}>
+          По вопросам работы ботов пишите{" "}
+          <a
+            href="https://t.me/@rocket_7777"
+            className={css.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            сюда
+          </a>
+        </p>
+        <p className={css.info}>
+          Создание торговых ботов по вашей стратегии. Пишите{" "}
+          <a
+            href="https://t.me/@rocket_7777"
+            className={css.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            сюда
+          </a>
+        </p>
       </footer>
     </div>
   );
