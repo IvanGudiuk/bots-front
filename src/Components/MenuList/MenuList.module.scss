@@ -21,17 +21,6 @@
   width: 100%;
   display: flex;
   justify-content: left;
-  margin-right: auto;
-
-  @media screen and (min-width: $tablet) {
-    margin-left: auto;
-  }
-
-  @media screen and (min-width: $desktop) {
-    margin-right: 0;
-    margin-left: 0;
-    width: fit-content;
-  }
 }
 
 .activeLink {
@@ -64,7 +53,7 @@
   display: flex;
   gap: 5px;
   align-items: center;
-  // justify-content: center;
+  text-align: left;
   font-size: 16px;
   font-weight: 900;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -83,6 +72,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    justify-content: center;
+    text-align: center;
   }
 }

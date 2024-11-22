@@ -8,7 +8,7 @@ import css from "./SharedLayout.module.scss";
 const SharedLayout = () => {
   return (
     <div className={css.wrapper}>
-      <div>
+      <div className={css.container}>
         <h2 className={css.text}>
           Скринеры рынка для биржи <span className={css.name}>Bybit</span>
         </h2>
@@ -16,11 +16,9 @@ const SharedLayout = () => {
         <img src={heroImage} className={css.hero} alt="hero" />
       </div>
       <MenuList />
-      <div>
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
-      </div>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };
