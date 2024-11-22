@@ -53,7 +53,7 @@ const Payment = () => {
       formData.append("sum", sum);
       formData.append("bots", JSON.stringify(selectedValue) || []);
 
-      const response = await axiosInstance.post(`/users/payment`, body);
+      const response = await axiosInstance.post(`/users/payment`, formData);
       if (response && response?.data?.link) {
         setLink(response.data.link);
       }
