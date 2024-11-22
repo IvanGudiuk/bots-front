@@ -15,10 +15,12 @@ const SharedLayout = () => {
         <h3 className={css.text}>Надежные боты для успешной торговли</h3>
         <img src={heroImage} className={css.hero} alt="hero" />
       </div>
-      <MenuList />
-      <Suspense fallback={<Loader />}>
-        <Outlet />
-      </Suspense>
+      <div className={css.box}>
+        <MenuList />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
+      </div>
     </div>
   );
 };
