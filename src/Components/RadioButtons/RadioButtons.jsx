@@ -39,7 +39,12 @@ export const RadioButtons = ({ options, onChange, initialValue }) => {
             />
             <label htmlFor={`checkbox-${index}`} className={css.name}></label>
             <span className={css.title}>{text}</span>
-            <Link to={link} className={css.link}>
+            <Link
+              to={link}
+              className={css.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Info />
             </Link>
           </li>
