@@ -33,7 +33,17 @@ const SharedLayout = () => {
             сюда
           </a>
         </p>
-        <p className={css.text}>Создание торговых ботов по вашей стратегии</p>
+        <p className={css.text}>
+          Создание торговых ботов по вашей стратегии. Пишите{" "}
+          <a
+            href="https://t.me/@rocket_7777"
+            className={css.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            сюда
+          </a>
+        </p>
       </footer>
     </div>
   );
