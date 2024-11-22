@@ -55,7 +55,7 @@ const Payment = () => {
 
       const response = await axiosInstance.post(`/users/payment`, formData, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
       });
       if (response && response?.data?.link) {
