@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { ReactComponent as Bot } from "../icons/volumes.svg";
 import signalImage from "../icons/volumes.png";
 import css from "./Pump.module.scss";
