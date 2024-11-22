@@ -4,6 +4,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .name {
@@ -18,7 +19,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .item {
@@ -44,8 +45,8 @@
 
 .link {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 
   & > svg {
     display: block;
