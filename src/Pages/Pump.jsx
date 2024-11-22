@@ -5,9 +5,9 @@ import css from "./Pump.module.scss";
 const Pump = () => {
   return (
     <div className={css.wrapper}>
-      <h3 className={css.name}>
+      <h2 className={css.name}>
         <Bot /> Скринер пампа цены
-      </h3>
+      </h2>
       <p className={css.text}>
         — это Telegram-бот, который уведомляет о резком росте или падении цены
         на активы на криптовалютной бирже Bybit в режиме реального времени.
