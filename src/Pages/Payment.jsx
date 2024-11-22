@@ -47,12 +47,12 @@ const Payment = () => {
 
   const paymentHandler = async () => {
     try {
-      const body = {
-        userId,
-        monthes: Number(selectedMonth),
-        bots: selectedValue,
-        sum,
-      };
+      const formData = new FormData();
+      formData.append("userId", userId);
+      formData.append("monthes", Number(selectedMonth));
+      formData.append("sum", sum);
+      formData.append("bots", JSON.stringify(selectedValue) || []);
+
       const response = await axiosInstance.post(`/users/payment`, body);
       if (response && response?.data?.link) {
         setLink(response.data.link);
