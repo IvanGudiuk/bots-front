@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import css from "./RadioButtons.module.scss";
 
 export const RadioButtons = ({ options, onChange, initialValue }) => {
@@ -25,7 +26,7 @@ export const RadioButtons = ({ options, onChange, initialValue }) => {
   return (
     <div className={css.container}>
       <ul className={css.list}>
-        {options.map(({ text, value }, index) => (
+        {options.map(({ text, value, link }, index) => (
           <li key={index} className={css.item}>
             <input
               type="checkbox"
@@ -37,6 +38,9 @@ export const RadioButtons = ({ options, onChange, initialValue }) => {
             />
             <label htmlFor={`checkbox-${index}`} className={css.name}></label>
             <span className={css.title}>{text}</span>
+            <NavLink to={link} className={css.link}>
+              подробнее
+            </NavLink>
           </li>
         ))}
       </ul>
