@@ -8,7 +8,7 @@ import css from "./SharedLayout.module.scss";
 const SharedLayout = () => {
   return (
     <div className={css.wrapper}>
-      <div className={css.container}>
+      <div>
         <h2 className={css.text}>
           Скринеры рынка для биржи <span className={css.name}>Bybit</span>
         </h2>
