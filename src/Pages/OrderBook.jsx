@@ -6,9 +6,9 @@ import css from "./Pump.module.scss";
 const OrderBook = () => {
   return (
     <div className={css.wrapper}>
-      <h3 className={css.name}>
+      <h2 className={css.name}>
         <Bot /> Скринер плотностей
-      </h3>
+      </h2>
       <p className={css.text}>
         - это Telegram-бот, который в реальном времени уведомляет о крупных
         лимитных заявках (плотностях) в биржевом стакане активов на

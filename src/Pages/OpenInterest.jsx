@@ -6,9 +6,9 @@ import css from "./Pump.module.scss";
 const OpenInterest = () => {
   return (
     <div className={css.wrapper}>
-      <h3 className={css.name}>
+      <h2 className={css.name}>
         <Bot /> Скринер открытого интереса
-      </h3>
+      </h2>
       <p className={css.text}>
         — это Telegram-бот, который уведомляет о росте открытого интереса
         активов на криптовалютной бирже Bybit в режиме реального времени.

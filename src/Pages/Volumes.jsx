@@ -5,9 +5,9 @@ import css from "./Pump.module.scss";
 const Volumes = () => {
   return (
     <div className={css.wrapper}>
-      <h3 className={css.name}>
+      <h2 className={css.name}>
         <Bot /> Скринер повышенного объёма
-      </h3>
+      </h2>
       <p className={css.text}>
         Это Telegram-бот, который в режиме реального времени уведомляет о
         повышенных объёмах торгов для активов на криптовалютной бирже Bybit.
