@@ -88,7 +88,7 @@ const Payment = () => {
   useEffect(() => {
     // if (selectedValue.length > 0) {
     // Базовая цена за одного бота на 1 месяц
-    const basePrice = 2;
+    const basePrice = 3;
 
     // let discount = 0;
 
