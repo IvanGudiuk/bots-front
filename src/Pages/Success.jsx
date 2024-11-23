@@ -9,7 +9,7 @@ const Success = () => {
           height="100"
           viewBox="9 14 30 10"
           fill="none"
-          stroke="#05991e"
+          stroke="#04cd25"
           stroke-width="4"
           stroke-dasharray="100"
           strokeLinecap="round"
