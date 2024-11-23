@@ -138,7 +138,7 @@ const Payment = () => {
           <span className={css.sum}>{sum}</span>{" "}
           <span className={css.currency}>usdt</span>
         </div>
-        <span className={css.commision}>* + коммисия сети</span>
+        <span className={css.commision}>* + комиссия сети</span>
         {/* <span className={css.discount}>{`СКИДКА: ${discount} usdt`}</span> */}
       </div>
       <button
