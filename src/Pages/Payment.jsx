@@ -33,6 +33,7 @@ const Payment = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState([]);
   const [link, setLink] = useState("");
+  const [error, setError] = useState("regtrh uytuyi uoip i789o ip o[ 'p][");
 
   const fetchUserData = async () => {
     try {
@@ -62,7 +63,7 @@ const Payment = () => {
         setLink(response.data.link);
       }
     } catch (error) {
-      console.log(error.message);
+      setError(error.message);
     }
   };
 
@@ -72,10 +73,13 @@ const Payment = () => {
     }
   }, [userId]);
 
-  // useEffect(() => {
-  //   console.log("userData", userData);
-  //   console.log("selectedValue", selectedValue);
-  // }, [userData, selectedValue]);
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => {
+        setError("");
+      }, 3500);
+    }
+  }, [userData, selectedValue]);
 
   useEffect(() => {
     if (link) {
@@ -121,6 +125,9 @@ const Payment = () => {
     <Loader />
   ) : (
     <div className={css.wrapper}>
+      <div className={error ? `${css.popup} ${visible}` : `${css.popup}`}>
+        <p className={css.error}>{error}</p>
+      </div>
       <p className={css.head}>Оплата подписки:</p>
       <span className={css.info}>
         * здесь указаны только те боты, которыми вы уже пользовались
