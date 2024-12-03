@@ -73,6 +73,11 @@ const Payment = () => {
   }, [userId]);
 
   useEffect(() => {
+    console.log("userData", userData);
+    console.log("selectedValue", selectedValue);
+  }, [userData, selectedValue]);
+
+  useEffect(() => {
     if (link) {
       window.location.href = link;
       setLink("");
