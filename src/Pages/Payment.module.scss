@@ -26,6 +26,7 @@
 
 .popup {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
   bottom: 0;
@@ -46,6 +47,7 @@
 
 .error {
   width: 90%;
+  min-height: 200px;
   font-size: 16px;
   text-align: center;
   color: rgb(237, 47, 47);
