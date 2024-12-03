@@ -125,7 +125,7 @@ const Payment = () => {
     <Loader />
   ) : (
     <div className={css.wrapper}>
-      <div className={error ? `${css.popup} ${visible}` : `${css.popup}`}>
+      <div className={error ? `${css.popup} ${css.visible}` : `${css.popup}`}>
         <p className={css.error}>{error}</p>
       </div>
       <p className={css.head}>Оплата подписки:</p>
