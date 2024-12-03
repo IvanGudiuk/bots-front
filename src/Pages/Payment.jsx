@@ -33,9 +33,7 @@ const Payment = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState([]);
   const [link, setLink] = useState("");
-  const [error, setError] = useState(
-    "regtrh uytuyi uoip i789o ip o[ 'p][ gyhjhi hgkj hguij hfguikn vuyijn vyihj"
-  );
+  const [error, setError] = useState("");
 
   const fetchUserData = async () => {
     try {
@@ -79,7 +77,7 @@ const Payment = () => {
     if (error) {
       setTimeout(() => {
         setError("");
-      }, 35000);
+      }, 3500);
     }
   }, [userData, selectedValue]);
 

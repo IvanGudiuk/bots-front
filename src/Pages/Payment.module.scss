@@ -46,13 +46,14 @@
 }
 
 .error {
-  width: 90%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 200px;
   font-size: 16px;
   text-align: center;
+  line-height: 1.8;
   color: rgb(237, 47, 47);
   background-color: #fff;
   padding: 15px;
@@ -60,11 +61,11 @@
   border: 1px solid rgb(237, 47, 47);
 
   @media screen and (min-width: $tablet) {
-    width: 70%;
+    width: 60%;
   }
 
   @media screen and (min-width: $desktop) {
-    width: 50%;
+    width: 40%;
   }
 }
 
