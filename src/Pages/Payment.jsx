@@ -79,7 +79,7 @@ const Payment = () => {
         setError("");
       }, 3500);
     }
-  }, [userData, selectedValue]);
+  }, [error, setError]);
 
   useEffect(() => {
     if (link) {
