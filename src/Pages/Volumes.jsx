@@ -26,7 +26,7 @@ const Volumes = () => {
           определенного актива
         </li>
         <li className={css.item}>3. Текущее значение объёма торгов.</li>
-        <li className={css.item}>4. Текущее значение объёма торгов.</li>
+        <li className={css.item}>4. Выбранный таймфрейм.</li>
       </ul>
       <img src={signalImage} alt="signal" className={css.img} />
       <h3 className={css.name}>Как начать использование бота?</h3>
