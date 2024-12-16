@@ -6,7 +6,7 @@ const Pump = () => {
   return (
     <div className={css.wrapper}>
       <h2 className={css.name}>
-        <Bot /> Скринер пампа цены
+        <Bot /> Скринер пампа/дампа цены
       </h2>
       <p className={css.text}>
         — это Telegram-бот, который уведомляет о резком росте или падении цены
@@ -62,7 +62,7 @@ const Pump = () => {
         </li>
         <li className={css.item}>
           2. Перейти к боту и нажать кнопку 'Старт'. Установить ваши собственные
-          праметры работы бота.{" "}
+          параметры работы бота.{" "}
           <span className={css.highlight}>
             Первые 72 часа использования бесплатно
           </span>
